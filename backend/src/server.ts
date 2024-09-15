@@ -4,12 +4,12 @@ import cors from "cors";
 import bodyParser from "body-parser";
 
 const app = express();
-const port = 3001; // Je backend draait op een andere poort dan je frontend
+const port = 3001; 
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // De URL van je frontend
-    credentials: true, // Indien nodig voor cookies
+    origin: ["http://localhost:3000", "https://obo-backend.onrender.com"],
+    credentials: true, 
   })
 );
 
